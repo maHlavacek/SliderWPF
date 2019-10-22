@@ -5,13 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SliderWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="300" Width="800">
+        Title="MainWindow" Height="300" Width="200">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <Slider x:Name="slSize" Minimum="10" Maximum="200" Grid.Column="0" VerticalAlignment="Center" TickFrequency="5"></Slider>
-        <Ellipse Fill="LightSkyBlue" Grid.Column="1" Width="{Binding ElementName=slSize, Path=Value, Mode=OneWay}" Height="{Binding ElementName=slSize, Path=Value, Mode=OneWay}"></Ellipse>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <TextBox x:Name="tbBox" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding ElementName=slSize,Path=Value, Mode=OneWay}"></TextBox>
+        <Slider x:Name="slSize" Minimum="10" Maximum="200" Grid.Row="1" VerticalAlignment="Center" TickFrequency="5"></Slider>
+        <Ellipse Fill="{Binding ElementName=cbColor, Path=Text, Mode=OneWay}" Grid.Row="3" Width="{Binding ElementName=slSize, Path=Value, Mode=OneWay}" Height="{Binding ElementName=slSize, Path=Value, Mode=OneWay}"></Ellipse>
+        <ComboBox x:Name="cbColor" Grid.Row="2" MaxWidth="200">
+            <ComboBoxItem>MediumVioletRed</ComboBoxItem>
+            <ComboBoxItem>LightBlue</ComboBoxItem>
+            <ComboBoxItem>LightGreen</ComboBoxItem>
+        </ComboBox>
     </Grid>
 </Window>
