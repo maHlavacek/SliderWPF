@@ -12,6 +12,6 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Slider x:Name="slSize" Minimum="10" Maximum="200" Grid.Column="0" VerticalAlignment="Center" TickFrequency="5"></Slider>
-        <Ellipse Fill="Blue" Grid.Column="1" Width="{Binding ElementName=slSize, Path=Value, Mode=OneWay}" Height="{Binding ElementName=slSize, Path=Value, Mode=OneWay}"></Ellipse>
+        <Ellipse Fill="LightSkyBlue" Grid.Column="1" Width="{Binding ElementName=slSize, Path=Value, Mode=OneWay}" Height="{Binding ElementName=slSize, Path=Value, Mode=OneWay}"></Ellipse>
     </Grid>
 </Window>
