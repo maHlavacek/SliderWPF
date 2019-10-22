@@ -13,8 +13,11 @@
             <RowDefinition></RowDefinition>
 
         </Grid.RowDefinitions>
-        <Slider x:Name="slSize" Minimum="10" Maximum="200" Grid.Row="0" VerticalAlignment="Center" TickFrequency="5" TickPlacement="TopLeft" AutoToolTipPlacement="TopLeft" ></Slider>
-        <Ellipse Fill="{Binding ElementName=cbColor, Path=Text, Mode=OneWay}" Grid.Row="2" Width="{Binding ElementName=slSize, Path=Value, Mode=OneWay}" Height="{Binding ElementName=slSize, Path=Value, Mode=OneWay}"></Ellipse>
+        <Slider x:Name="slSize" Minimum="10" Maximum="200" Grid.Row="0" VerticalAlignment="Center" 
+                TickFrequency="5" TickPlacement="TopLeft" AutoToolTipPlacement="TopLeft" ></Slider>
+        <Ellipse Fill="{Binding ElementName=cbColor, Path=Text, Mode=OneWay}" Grid.Row="2" 
+                 Width="{Binding ElementName=slSize, Path=Value, Mode=OneWay}" 
+                 Height="{Binding ElementName=slSize, Path=Value, Mode=OneWay}"></Ellipse>
         <ComboBox x:Name="cbColor" Grid.Row="1" MaxWidth="200">
             <ComboBoxItem>Red</ComboBoxItem>
             <ComboBoxItem>LightBlue</ComboBoxItem>
