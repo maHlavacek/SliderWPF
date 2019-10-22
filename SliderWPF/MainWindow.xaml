@@ -20,7 +20,7 @@
                  Height="{Binding ElementName=slSize, Path=Value, Mode=OneWay}"></Ellipse>
         <ComboBox x:Name="cbColor" Grid.Row="1" MaxWidth="200">
             <ComboBoxItem>Red</ComboBoxItem>
-            <ComboBoxItem>LightBlue</ComboBoxItem>
+            <ComboBoxItem IsSelected="True">LightBlue</ComboBoxItem>
             <ComboBoxItem>LightGreen</ComboBoxItem>
         </ComboBox>
     </Grid>
